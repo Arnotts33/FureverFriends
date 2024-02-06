@@ -1,0 +1,11 @@
+<h1 class="text-center mt-2">Create my profile</h1>
+
+<div class="container pb-3 pt-4">
+  <%= simple_form_for @profile do |f| %>
+    <%= f.input :profile_picture, as: :file %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :address %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>
