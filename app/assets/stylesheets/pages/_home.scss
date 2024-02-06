@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content-container {
+  background-image: url("home_background.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  background-color: rgba(#000000, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  padding: 160px 240px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title .btn {
+  width: 50%;
+  border-radius: 50px;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+.reviews {
+  background-color: rgba(#000000, 0.5);
+  margin-top: 100px;
+  width: 800px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}

@@ -1,6 +1,21 @@
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.btn {
+  background-color: #E8630A;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #E8630A;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #035397;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +24,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-brand {
+  margin: 0;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
 }
