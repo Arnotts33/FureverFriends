@@ -1,0 +1,11 @@
+<%= form_tag submit_quizzes_path, method: :post do %>
+  <% @questions.each_with_index do |q, index| %>
+    <p><%= q[:question] %></p>
+    <% q[:answers].each do |key, value| %>
+      <%= radio_button_tag "answers[#{index}]", value %>
+      <%= label_tag "answers[#{index}]", "#{key}: #{value}" %>
+    <% end %>
+    <br>
+  <% end %>
+  <%= submit_tag "Submit" %>
+<% end %>
