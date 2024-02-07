@@ -1,5 +1,5 @@
 class BreedsController < ApplicationController
   def index
-    @breed.id
+    @breeds = Breed.all
   end
 end
