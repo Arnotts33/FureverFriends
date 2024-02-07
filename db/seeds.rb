@@ -7,8 +7,23 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "open-uri"
+
+puts "Destroying breeds..."
+
 Breed.destroy_all
 
-dog1 = Breed.create(name: "Bernese Mountain Dog", score: "2", details: "Some details about breed", description: "Some description", picture: "bernese-mountain-dog.jpg")
-dog2 = Breed.create(name: "Jack Russell Terrier", score: "4", details: "Some details about breed", description: "Some description", picture: "jack_russell_terrier.jpg")
-dog3 = Breed.create(name: "Shiba Inu", score: "1", details: "Some details about breed", description: "Some description", picture: "shiba-inu.jpg")
+puts "Creating breeds..."
+
+dog1 = {name: "German Shepherd", details: "Some details about breed", description: "Some description", picture: "https://images.unsplash.com/photo-1607034145556-36a4aefc3b97?q=80&w=1564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog2 = {name: "Bernese Mountain Dog", details: "Some details about breed", description: "Some description", picture: "https://images.unsplash.com/photo-1666212565787-8cd1d0075875?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog3 = {name: "Jack Russell Terrier", details: "Some details about breed", description: "Some description", picture: "https://images.unsplash.com/photo-1599908758973-b02eb044e5ab?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog4 = {name: "Shiba Inu", details: "Some details about breed", description: "Some description", picture: "https://images.unsplash.com/photo-1618173745201-8e3bf8978acc?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+
+[dog1, dog2, dog3, dog4].each do |attributes|
+  file = URI.open(attributes[:picture])
+  breed = Breed.new(attributes)
+  breed.photo.attach(io: file, filename: "#{attributes[:name]}.png", content_type: "image/png")
+  breed.save!
+  puts "Created #{breed.name}"
+end
