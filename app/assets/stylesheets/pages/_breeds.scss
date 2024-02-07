@@ -1,9 +1,19 @@
 .dog-image img {
-  width: 300px;
+  width: 100%;
   height: 300px;
+  object-fit: cover;
+  object-position: 50%;
 }
 
 .dogs-card {
   background-color: white;
-  width: 700px;
+  width: 30%;
+  border-color: black;
+ margin-bottom: 30px;
+}
+.dogs-card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
