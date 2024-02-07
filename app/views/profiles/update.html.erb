@@ -1,0 +1,8 @@
+<h1>Profile#update</h1>
+<p>Find me in app/views/profile/update.html.erb</p>
+<%= simple_form_for @user, profiles_path(@user), html: { method: :patch } do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.submit 'Save changes', class: 'btn btn-primary' %>
+<% end %>
