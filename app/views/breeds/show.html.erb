@@ -1,0 +1,9 @@
+<div class="breed-card-container">
+  <%= image_tag(@breed.picture, :width=>320, :crop=>"scale", class: 'breed-picture') %>
+  <div class="breed-card">
+    <h1><%= @breed.name %></h1>
+    <h5><%= @breed.details %></h5>
+    <p><%= @breed.description %></p>
+    <a href="#" class="btn">Find a <%= @breed.name %> near me!</a>
+  </div>
+</div>
