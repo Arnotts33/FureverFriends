@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user = current_user
     @profile.save
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   def edit
@@ -21,7 +21,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
     @profile.update(profile_params)
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   private
