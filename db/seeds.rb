@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Breed.destroy_all
+
+dog1 = Breed.create(name: "Bernese Mountain Dog", score: "2", details: "Some details about breed", description: "Some description", picture: "bernese-mountain-dog.jpg")
+dog2 = Breed.create(name: "Jack Russell Terrier", score: "4", details: "Some details about breed", description: "Some description", picture: "jack_russell_terrier.jpg")
+dog3 = Breed.create(name: "Shiba Inu", score: "1", details: "Some details about breed", description: "Some description", picture: "shiba-inu.jpg")
