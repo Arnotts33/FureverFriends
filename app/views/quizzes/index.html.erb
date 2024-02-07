@@ -1,11 +1,34 @@
-<%= form_tag submit_quizzes_path, method: :post do %>
-  <% @questions.each_with_index do |q, index| %>
-    <p><%= q[:question] %></p>
-    <% q[:answers].each do |key, value| %>
-      <%= radio_button_tag "answers[#{index}]", value %>
-      <%= label_tag "answers[#{index}]", "#{key}: #{value}" %>
+<div class="quiz-container">
+  <%= form_tag submit_quizzes_path, class: "quiz-form", method: :post do %>
+    <% @questions.each_with_index do |q, index| %>
+    <div class = "ind-q">
+      <p><%= q[:question] %></p>
+    </div>
+      <div class = "answers">
+        <% q[:answers].each do |key, value| %>
+          <div class = "ind-a">
+            <label class="btn" >
+              <%= radio_button_tag "answers[#{index}]", value %>
+              <span><%= "#{key}: #{value}" %></span>
+            </label>
+          </div>
+        <% end %>
+      </div>
+      <br>
     <% end %>
-    <br>
+    <%= submit_tag "Submit", class: "btn spc-top" %>
   <% end %>
-  <%= submit_tag "Submit" %>
-<% end %>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const labels = document.querySelectorAll('.ind-a label');
+
+    labels.forEach(label => {
+      label.addEventListener('click', function() {
+           // Add active class to the clicked label
+        label.classList.add('active');
+      });
+    });
+  });
+</script>
