@@ -1,0 +1,16 @@
+<h1>It's a match!</h1>
+<h3>Browse through the list of your perfect Pawtners:</h3>
+  <div class= "dogs-container">
+    <% @breeds.each do |breed| %>
+      <div class= "dogs-card">
+        <div class="dog-image">
+          <%= image_tag(breed.picture) %>
+        </div>
+        <div class= "dog-card-body">
+    <h5><%= breed.name %></h5>
+        <%= breed.details %>
+        <%= breed.description %>
+        </div>
+      </div>
+    <% end %>
+  </div>
