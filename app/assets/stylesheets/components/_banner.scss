@@ -1,0 +1,76 @@
+.banner {
+  width: 72%;
+  height: 400px;
+  margin-top: 100px;
+  padding: 0px 25px 0px 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:rgba(0,0,0,0.4);
+  background-size: cover;
+  background-position: center;
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+  }
+  p {
+    color: white;
+    opacity: .9;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+  .btn {
+    padding: 15px 50px;
+  }
+}
+
+.banner-reviews {
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0px 25px 0px 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:rgba(0,0,0,0.4);
+  background-size: cover;
+  background-position: center;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .card {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #001E6C;
+    padding: 20px;
+    border: #001E6C 1px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #363636;
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: justify;
+      color: white;
+    }
+    p {
+      font-size: 12px;
+      font-weight: lighter;
+      text-align: justify;
+      color: white;
+    }
+  }
+
+}
