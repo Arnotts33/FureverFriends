@@ -15,3 +15,5 @@ dog1.save
 dog2 = Breed.create(name: "Bernese Mountain Dog", details: "Some details about breed", description: "Some description", picture: "bernese-mountain-dog.jpg")
 dog3 = Breed.create(name: "Jack Russell Terrier", details: "Some details about breed", description: "Some description", picture: "jack_russell_terrier.jpg")
 dog4 = Breed.create(name: "Shiba Inu", details: "Some details about breed", description: "Some description", picture: "shiba-inu.jpg")
+dog5 = Breed.create(name: "Golden Retriever", details: "Some details about breed", description: "Some description", picture: "golden-retriever.jpg")
+dog6 = Breed.create(name: "Dwarf Poodle", details: "Some details about breed", description: "Some description", picture: "dwarf-poodel.jpg")
