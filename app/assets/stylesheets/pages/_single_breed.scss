@@ -1,15 +1,22 @@
 .breed-card-container {
   width: 80%;
-  height: 640px;
   background-color: rgba(#000000, 0.8);
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 50px;
   border-radius: 10px;
   box-shadow: 0 40px 60px -6px black;
-
 }
+
+.breed-image-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
 
 .breed-picture {
   border-radius: 10px;
@@ -25,6 +32,19 @@
   align-content: flex-start;
 }
 
-.breed-card a {
-  margin: 0;
+.breed-card {
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.breed-show-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.breed-description {
+  color: white;
+  margin-bottom: 24px;
 }

@@ -1,9 +1,20 @@
-<div class="breed-card-container">
-  <%= image_tag(@breed.picture, :width=>320, :crop=>"scale", class: 'breed-picture') %>
-  <div class="breed-card">
-    <h1><%= @breed.name %></h1>
-    <h5><%= @breed.details %></h5>
-    <p><%= @breed.description %></p>
-    <a href="#" class="btn">Find a <%= @breed.name %> near me!</a>
+<div class="breed-show-container">
+  <div class="breed-card-container">
+    <div class="breed-image-title">
+       <div class="dog-image">
+          <%= image_tag(@breed.picture, :width=>320, :crop=>"scale", class: 'breed-picture') %>
+        </div>
+        <div class="breed-card">
+          <h1><%= @breed.name %></h1>
+          <h5><%= @breed.details %></h5>
+          <p><%= @breed.description %></p>
+        </div>
+    </div>
+    <div class="breed-description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="location-button">
+      <a href="#" class="btn">Find a <%= @breed.name %> near me!</a>
+    </div>
   </div>
 </div>
