@@ -3,17 +3,46 @@
   height: 300px;
   object-fit: cover;
   object-position: 50%;
+  border-start-end-radius: 5px;
+  border-start-start-radius: 5px;
 }
 
 .dogs-card {
   background-color: white;
+  color: black;
   width: 30%;
-  border-color: black;
- margin-bottom: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: black;
 }
 .dogs-card-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-color: black;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  padding: 20px;
+}
+
+.dogs-card-title {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.text-center {
+  color: white;
+  padding: 10px;
+}
+
+.container {
+  background-color: #035297b9;
+  margin-top: 20px;
+  margin-bottom: 20px ;
 }
