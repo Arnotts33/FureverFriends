@@ -1,25 +1,30 @@
 
-<div class="banner">
-  <div class="banner-content text-center">
-    <h1>FureverFriends: Find your Pawtner in crime!</h1>
-    <p>Determine which breed is best suited for you and live a happy life with your furryFriend!</p>
-    <%= link_to "Sign up", new_user_registration_path, class: 'btn' %>
+  <div class="banner">
+    <div class="banner-content text-center">
+      <h1>FureverFriends: Find your Pawtner in crime!</h1>
+      <p>Determine which breed is best suited for you and live a happy life with your furryFriend!</p>
+      <% if user_signed_in? %>
+          <%# Redirect to the dashboard_path if the user is signed in %>
+          <%= link_to "Take the Quiz", quizzes_path, class: 'btn' %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, class: 'btn' %>
+      <% end %>
+    </div>
   </div>
-</div>
 
-<div class="banner-reviews">
-  <div class="review-cards">
-    <div class="card">
-    <h3>Julia K.</h3>
-    <p>Thanks to FurreverFriends, I’ve found Ollie, the best pawtner I could have imagined! </p>
-    </div>
-    <div class="card">
-    <h3>Pedro. D</h3>
-    <p>Thanks to FurreverFriends, I’ve found Ollie, the best pawtner I could have imagined! </p>
-    </div>
-    <div class="card">
-    <h3>Arnaud. L</h3>
-    <p>Thanks to FurreverFriends, I’ve found Ollie, the best pawtner I could have imagined! </p>
+  <div class="banner-reviews">
+    <div class="review-cards">
+      <div class="card">
+        <h3>Julia K.</h3>
+        <p>Thanks to FurreverFriends, I’ve found Ollie, the best pawtner I could have imagined! </p>
+      </div>
+      <div class="card">
+        <h3>Pedro. D</h3>
+        <p>Thanks to FurreverFriends, I’ve found Ollie, the best pawtner I could have imagined! </p>
+      </div>
+      <div class="card">
+        <h3>Arnaud. L</h3>
+        <p>Thanks to FurreverFriends, I’ve found Ollie, the best pawtner I could have imagined! </p>
+      </div>
     </div>
   </div>
-</div>
