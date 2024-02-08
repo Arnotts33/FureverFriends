@@ -7,16 +7,16 @@
       <div class = "answers">
         <% q[:answers].each do |key, value| %>
           <div class = "ind-a">
-            <label class="btn" >
+            <label class="btn radio-btn-box-centered" >
               <%= radio_button_tag "answers[#{index}]", value %>
-              <span><%= "#{key}: #{value}" %></span>
+              <span><%= "#{key}" %></span>
             </label>
           </div>
         <% end %>
       </div>
       <br>
     <% end %>
-    <%= submit_tag "Submit", class: "btn spc-top" %>
+    <%= submit_tag "Submit", class: "btn-submit" %>
   <% end %>
 </div>
 
@@ -26,7 +26,14 @@
 
     labels.forEach(label => {
       label.addEventListener('click', function() {
-           // Add active class to the clicked label
+        // Remove 'active' class from all labels
+        labels.forEach(otherLabel => {
+          if (otherLabel !== label) {
+            otherLabel.classList.remove('active');
+          }
+        });
+
+        // Add 'active' class to the clicked label
         label.classList.add('active');
       });
     });
