@@ -6,28 +6,39 @@
   align-items: normal;
   align-content: normal;
   width: 80%;
-  height: 70%;
+  height: 65%;
   border-radius: 11px;
-  background-color: #035297aa;
+  background-color: #035297ce;
   box-shadow: 0px -1px 40px -1px rgba(0,0,0,0.75);
+  overflow: hidden;
 }
 
 .quiz-form {
-  width: 50%;
-  border: 10px solid #ff0000;
+  width: 100%;
+  max-width: 800px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow:visible;
 }
 
 .ind-q {
-  display: flex;;
+  display: flex;
   flex-direction: column;
   align-content: flex-start;
-  margin-bottom: 150px;
-  border: solid red;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ind-q p {
+  text-align: center;
+  font-size: xx-large;
+  margin: 0px;
 }
 
 .answers {
@@ -35,21 +46,57 @@
   flex-basis: auto;
   align-self: center;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
-  border: 5px solid red;
-}
-
-.spc-top {
-  margin-top: 100px;
 }
 
 .ind-a {
   display: inline-block;
-  margin-right: 10px; /* Adjust spacing between options if needed */
+  margin-right: 10px;
 }
 
 .ind-a label.active {
-  background-color: #ff0000; /* Change this to the desired color */
-   color: #ffffff; /* Change this to the desired text color */
+  background-color: #e8630a92;
+  color: #ffffff;
+}
+
+.radio-btn-box-centered {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 50px;;
+}
+
+.ind-a span {
+  font-weight: 500;
+  text-align: center;
+}
+
+.btn-submit {
+  padding: 15px 40px;
+  background: #e8630a92;
+  border: 5px solid #E8630A;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 18px;
+  letter-spacing: 3px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin: 50px auto;
+  transition: 1.5s;
+}
+
+.btn-submit:hover {
+  padding: 20px 45px;
+  background: #E8630A;
+  transition: 1.5s;
+}
+
+.btn-submit:focus {
+  padding: 15px 40px;
+  background: #e8630a92;
+  transition: none;
 }
