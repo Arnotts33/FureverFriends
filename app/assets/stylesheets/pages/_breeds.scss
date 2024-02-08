@@ -3,31 +3,30 @@
   height: 300px;
   object-fit: cover;
   object-position: 50%;
-  border-start-end-radius: 5px;
-  border-start-start-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
 .dogs-card {
-  background-color: white;
+  background-color: #FEFBF6;
   color: black;
   width: 30%;
   margin-bottom: 30px;
   border-radius: 5px;
   align-items: center;
-  box-shadow: black;
+  border: 2px solid black;
+  box-shadow: -1px -1px 4px 0px rgba(0,0,0,0.34);
 }
 .dogs-card-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-color: black;
 }
 
 .card-content {
   display: flex;
   justify-content: center;
-  font-weight: 100;
   padding: 20px;
 }
 
@@ -37,7 +36,7 @@
 }
 
 .text-center {
-  color: white;
+  color: #FEFBF6;
   padding: 10px;
 }
 
@@ -45,4 +44,12 @@
   background-color: #035297b9;
   margin-top: 20px;
   margin-bottom: 20px ;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: 200;
 }
