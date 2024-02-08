@@ -1,3 +1,16 @@
+.dash-nav {
+  display: flex;
+  justify-content: flex-start;
+  width: 350px;
+  margin-right: 10%;
+  border-radius: 11px;
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
+}
+
 .sidebar {
   background-color: #f8f9fa;
   padding: 20px;
@@ -5,11 +18,10 @@
   flex-direction: column;
   box-shadow: 8px 0px 19px 1px rgba(0,0,0,0.63);
   order: 1;
-  justify-content: flex-start;
 }
 
 .profile-img {
-  width: 100%;
+  width: 50%;
   border-radius: 50%;
   box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.63);
 }
@@ -17,6 +29,18 @@
 .main-dash {
   display: flex;
   padding: 20px;
+  padding-right: 10px;
   background-color: #f8f9fa;
   flex-direction: column;
+  width: 800px;
+  height: 300px;
+  margin-left: 10%;
+  overflow: auto;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  box-shadow: 5px 5px 16px -3px rgba(0,0,0,0.75);
+}
+
+.black-text {
+  color: black;
 }
