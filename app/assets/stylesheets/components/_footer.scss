@@ -4,16 +4,15 @@
   grid-template-rows: auto 1fr auto;
 }
 
-.footer {
+.footer-container {
   background-color: #035397;
   color: #fff;
   /*position: fixed;*/
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  opacity: 0.8;
 }
 
 .footer a {
