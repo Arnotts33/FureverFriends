@@ -7,12 +7,15 @@
     <% @breeds.each do |breed| %>
       <div class="dogs-card p-1">
         <div class="dog-image">
+          <%= link_to breed_path(breed), class: "card-link" do %>
           <%= image_tag(breed.picture) %>
         </div>
         <div class="card-content">
           <h5 class="bold"><%= breed.name %></h5>
-          </div>
+        </div>
       </div>
+        <% end %>
     <% end %>
+    <%= link_to "Return to dashboard", dashboard_path, class: "btn-dash" %>
   </div>
 </div>

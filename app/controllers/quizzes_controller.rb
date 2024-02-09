@@ -13,6 +13,6 @@ class QuizzesController < ApplicationController
 
     @breed = Breed.where("score >= ? AND score <= ?", score - 3, score + 3).first
 
-    redirect_to breeds_path(breed_id: @breed.id)
+    redirect_to breeds_path(breed_id: @breed)
   end
 end
