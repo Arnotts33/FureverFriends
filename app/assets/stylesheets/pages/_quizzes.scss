@@ -36,9 +36,13 @@
 }
 
 .ind-q p {
+  display: flex;
   text-align: center;
   font-size: xx-large;
   margin: 0px;
+  width: 800px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .answers {
