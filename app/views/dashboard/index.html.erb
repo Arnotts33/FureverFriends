@@ -3,7 +3,11 @@
     <!-- Sidebar -->
     <div class="dash-nav sidebar">
       <div class="text-center black-text">
-        <%= image_tag(@current_user.profile.profile_picture,  :width=>150, :height=>150, :crop=>"fill", class: "profile-img") %>
+        <% if @current_user.profile.profile_picture.attached? %>
+            <%= cl_image_tag((@current_user.profile.profile_picture.key), :width=>40, :height=>40, :crop=>"fill", class: "profile-img") %>
+            <% else %>
+            <%= image_tag(("https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000&t=st=1707480406~exp=1707481006~hmac=c54fb5f77797663f114a9ef33de8d00d1b019b09a47970360ef95c580fe0e0ec"), :width=>40, :height=>40, :crop=>"fill", class: "profile-img") %>
+          <% end %>
         <h4><br><%= @current_user.profile.first_name %></h4>
         <p><%= @current_user.email %></p>
         <p><%= @current_user.profile.address %></p>
