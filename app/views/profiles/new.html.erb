@@ -2,13 +2,13 @@
 <div class="profile-container">
   <h1 class="text-center mt-2">Create my profile</h1>
 
-<div class="form-container">
-  <%= simple_form_for @profile do |f| %>
-    <%= f.input :profile_picture, as: :file %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :address %>
-</div>
-    <%= f.submit class: 'btn-profile' %>
-  <% end %>
+  <div class="form-container">
+    <%= simple_form_for @profile do |f| %>
+      <%= f.input :profile_picture, as: :file %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :address %>
+      <%= f.submit class: 'btn-profile' %>
+    <% end %>
+  </div>
 </div>
