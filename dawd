@@ -1,0 +1,41 @@
+=> 
+[[32m#<Breed:0x00007f5739c01470[0m
+  id: [34m[1m27[0m,
+  name: [31m[1m"[0m[31mGerman Shepherd[0m[31m[1m"[0m,
+  details: [31m[1m"[0m[31mSome details about breed[0m[31m[1m"[0m,
+  picture:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1607034145556-36a4aefc3b97?q=80&w=1564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  description: [31m[1m"[0m[31mSome description[0m[31m[1m"[0m,
+  created_at: Fri, 09 Feb 2024 11:18:10.262635000 UTC +00:00,
+  updated_at: Fri, 09 Feb 2024 11:18:12.648883000 UTC +00:00,
+  score: [34m[1m3[0m[32m>[0m,
+ [32m#<Breed:0x00007f5739b94230[0m
+  id: [34m[1m28[0m,
+  name: [31m[1m"[0m[31mBernese Mountain Dog[0m[31m[1m"[0m,
+  details: [31m[1m"[0m[31mSome details about breed[0m[31m[1m"[0m,
+  picture:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1666212565787-8cd1d0075875?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  description: [31m[1m"[0m[31mSome description[0m[31m[1m"[0m,
+  created_at: Fri, 09 Feb 2024 11:18:13.124790000 UTC +00:00,
+  updated_at: Fri, 09 Feb 2024 11:18:15.131813000 UTC +00:00,
+  score: [34m[1m5[0m[32m>[0m,
+ [32m#<Breed:0x00007f5739b94168[0m
+  id: [34m[1m29[0m,
+  name: [31m[1m"[0m[31mJack Russell Terrier[0m[31m[1m"[0m,
+  details: [31m[1m"[0m[31mSome details about breed[0m[31m[1m"[0m,
+  picture:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1599908758973-b02eb044e5ab?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  description: [31m[1m"[0m[31mSome description[0m[31m[1m"[0m,
+  created_at: Fri, 09 Feb 2024 11:18:15.567392000 UTC +00:00,
+  updated_at: Fri, 09 Feb 2024 11:18:17.627098000 UTC +00:00,
+  score: [34m[1m6[0m[32m>[0m,
+ [32m#<Breed:0x00007f5739b940a0[0m
+  id: [34m[1m30[0m,
+  name: [31m[1m"[0m[31mShiba Inu[0m[31m[1m"[0m,
+  details: [31m[1m"[0m[31mSome details about breed[0m[31m[1m"[0m,
+  picture:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1618173745201-8e3bf8978acc?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  description: [31m[1m"[0m[31mSome description[0m[31m[1m"[0m,
+  created_at: Fri, 09 Feb 2024 11:18:18.019105000 UTC +00:00,
+  updated_at: Fri, 09 Feb 2024 11:18:18.026558000 UTC +00:00,
+  score: [34m[1m4[0m[32m>[0m]

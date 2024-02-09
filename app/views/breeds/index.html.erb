@@ -4,7 +4,7 @@
   <h3>Browse through the list of your perfect Pawtners:</h3>
 </div>
 <div class="dogs-card-container p-3">
-    <% @breeds.each do |breed| %>
+    <% @breeds_array.each do |breed| %>
       <div class="dogs-card p-1">
         <div class="dog-image">
           <%= link_to breed_path(breed), class: "card-link" do %>

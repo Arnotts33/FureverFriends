@@ -1,8 +1,8 @@
 class BreedsController < ApplicationController
-
   def index
     @user = current_user
     @breeds = Breed.all
+    @breeds_array = current_user.breeds
   end
 
   def show
@@ -15,5 +15,4 @@ class BreedsController < ApplicationController
   def breed_params
     params.require(:breed).permit(:name, :details, :description, :picture)
   end
-
 end

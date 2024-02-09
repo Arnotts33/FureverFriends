@@ -15,10 +15,10 @@ Breed.destroy_all
 
 puts "Creating breeds..."
 
-dog1 = {name: "German Shepherd", details: "Some details about breed", description: "Some description", score: "3", picture: "https://images.unsplash.com/photo-1607034145556-36a4aefc3b97?q=80&w=1564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-dog2 = {name: "Bernese Mountain Dog", details: "Some details about breed", description: "Some description", score: "5", picture: "https://images.unsplash.com/photo-1666212565787-8cd1d0075875?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-dog3 = {name: "Jack Russell Terrier", details: "Some details about breed", description: "Some description", score: "6", picture: "https://images.unsplash.com/photo-1599908758973-b02eb044e5ab?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-dog4 = {name: "Shiba Inu", details: "Some details about breed", description: "Some description", score: "4",picture: "https://images.unsplash.com/photo-1618173745201-8e3bf8978acc?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog1 = {name: "German Shepherd", details: "Some details about breed", description: "Some description", score: "12", picture: "https://images.unsplash.com/photo-1607034145556-36a4aefc3b97?q=80&w=1564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog2 = {name: "Bernese Mountain Dog", details: "Some details about breed", description: "Some description", score: "14", picture: "https://images.unsplash.com/photo-1666212565787-8cd1d0075875?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog3 = {name: "Jack Russell Terrier", details: "Some details about breed", description: "Some description", score: "20", picture: "https://images.unsplash.com/photo-1599908758973-b02eb044e5ab?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+dog4 = {name: "Shiba Inu", details: "Some details about breed", description: "Some description", score: "22",picture: "https://images.unsplash.com/photo-1618173745201-8e3bf8978acc?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
 
 [dog1, dog2, dog3, dog4].each do |attributes|
   file = URI.open(attributes[:picture])
