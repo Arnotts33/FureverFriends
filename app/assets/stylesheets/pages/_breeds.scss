@@ -53,3 +53,20 @@
 .bolder {
   font-weight: 200;
 }
+
+.card-link {
+  text-decoration: none;
+  color: inherit
+}
+
+.btn-dash {
+  background-color: #E8630A;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  height: 10%;
+  align-self: flex-end;
+}

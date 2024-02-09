@@ -3,20 +3,23 @@
     <!-- Sidebar -->
     <div class="dash-nav sidebar">
       <div class="text-center black-text">
-        <%= image_tag("https://kitt.lewagon.com/placeholder/users/jule-tech", alt: "Profile Picture", class: "profile-img") %>
+        <%= image_tag(@current_user.profile.profile_picture,  :width=>150, :height=>150, :crop=>"fill", class: "profile-img") %>
         <h4><br><%= @current_user.profile.first_name %></h4>
-        <p>Email: <%= current_user.email %></p>
+        <p><%= @current_user.email %></p>
+        <p><%= @current_user.profile.address %></p>
       </div>
       <hr>
       <ul class="list-unstyled">
-        <li><%= link_to "Quiz", quizzes_path %></li>
-        <li><%= link_to "Settings", edit_user_registration_path %></li>
+        <li><%= link_to "Take quiz!", quizzes_path %></li>
+        <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile) %></li>
+        <li><%= link_to "Change password", edit_user_registration_path %></li>
         <li><%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %></li>
       </ul>
     </div>
     <div class="col-md-9 main-dash"> <!-- Adjusted column width -->
-      <h2>Main Content Area</h2>
+      <h2>Hello <%= @current_user.profile.first_name %>!</h2>
       <p>This is the main content area where you can display different sections of your dashboard.</p>
+      <%= link_to "Take quiz!", quizzes_path %>
     </div>
   </div>
 </div>

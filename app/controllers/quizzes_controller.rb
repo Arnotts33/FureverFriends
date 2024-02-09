@@ -1,5 +1,6 @@
 class QuizzesController < ApplicationController
   def index
+    @user = current_user
     @questions = [
       { question: "Where do you live ?", answers: { "Big house with garden": 1, "Apartment outside the city": 2, "Apartment inside the city": 3 } },
       { question: "Do you mind shedding ?", answers: { "Yes, I don't want a lot of shedding": 4, "It's not that big of a deal": 5, "No, it's fine by me !": 6 } },

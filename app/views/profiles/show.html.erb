@@ -2,7 +2,7 @@
 <div class= "background">
   <h1 class="container text-center"> <%= @profile.first_name %>`s profile</h1>
   <div class="card text-center m-4">
-   <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/jule-tech", class: "avatar profile-pic", alt: "dropdown menu" %></p> <br>
+   <p><%= image_tag(@current_user.profile.profile_picture) %></p> <br>
   </div>
   <div class="card text-center m-4 mt-2 pt-3">
     <p class= "text-show">I am: <%= @profile.first_name %> <%= @profile.last_name %></p> <br>
