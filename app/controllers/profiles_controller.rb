@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   def show
     @profile = Profile.find(params[:id])
+    @profile.user = current_user
   end
 
   def new
@@ -16,10 +17,12 @@ class ProfilesController < ApplicationController
 
   def edit
     @profile = Profile.find(params[:id])
+    @profile.user = current_user
   end
 
   def update
     @profile = Profile.find(params[:id])
+    @profile.user = current_user
     @profile.update(profile_params)
     redirect_to dashboard_path
   end
