@@ -11,8 +11,8 @@ class QuizzesController < ApplicationController
   def submit
     score = params[:answers].values.map(&:to_i).sum
 
-    @breed = Breed.where("score >= ? AND score <= ?", score - 3, score + 3).first
+    @breed = Breed.where("score >= ? AND score <= ?", score - 5, score + 5).first
 
-    redirect_to breeds_path(breed_id: @breed.id)
+    redirect_to breeds_path(breed_id: @breed)
   end
 end
