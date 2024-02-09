@@ -1,7 +1,7 @@
 class BreedsController < ApplicationController
-
   def index
-    @breeds = Breed.all
+    # Fetch breeds for the current user
+    @breeds_array = current_user.breeds
   end
 
   def show
@@ -13,5 +13,4 @@ class BreedsController < ApplicationController
   def breed_params
     params.require(:breed).permit(:name, :details, :description, :picture)
   end
-
 end
