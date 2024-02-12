@@ -1,8 +1,9 @@
 class SellersController < ApplicationController
 
   def index
+    @user = current_user.profile
     @breed = Breed.find(params[:breed_id])
-    @sellers = Seller.by_breed(@breed.name).all
+    @sellers = Seller.by_breed(@breed.name).near(@user.address, 100).all
     @markers = @sellers.geocoded.map do |seller|
       {
         lat: seller.latitude,
@@ -11,6 +12,10 @@ class SellersController < ApplicationController
         marker_html: render_to_string(partial: "marker")
       }
     end
+    @user_marker = {
+      lat: @user.latitude,
+      lng: @user.longitude,
+    }
   end
 
 
