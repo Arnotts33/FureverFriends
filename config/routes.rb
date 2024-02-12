@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   resources :profiles, only: [:show, :new, :create, :edit, :update]
 
   resources :breeds, only: [:index, :show]
+
+  resources :sellers
+
 end
