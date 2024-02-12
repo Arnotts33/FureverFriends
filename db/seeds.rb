@@ -27,3 +27,13 @@ dog4 = {name: "Shiba Inu", details: "Some details about breed", description: "So
   breed.save!
   puts "Created #{breed.name}"
 end
+
+puts "Destroying sellers..."
+
+Seller.destroy_all
+
+puts "Creating sellers..."
+
+Seller.create(name: "Des Gerveilles", address: "26 route du Pas de Meric, 33920 Saint Yzan de Soudiac", email: "seller1@gmail.com", phone_number: "0556454647")
+
+puts "Created sellers"
