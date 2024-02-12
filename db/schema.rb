@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_12_151113) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_12_161503) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -77,15 +77,31 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_12_151113) do
     t.integer "score"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "emails", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "seller_id", null: false
-    t.string "title"
+    t.text "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["seller_id"], name: "index_emails_on_seller_id"
     t.index ["user_id"], name: "index_emails_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -174,6 +190,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_12_151113) do
   add_foreign_key "breed_suggestions", "quiz_results"
   add_foreign_key "emails", "sellers"
   add_foreign_key "emails", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quiz_results", "quizzes"
