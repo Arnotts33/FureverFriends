@@ -4,9 +4,8 @@ class BreedsController < ApplicationController
     @breeds = Breed.all
     @breed_names = params[:breeds_names]
     @breed_names = @breed_names.map do |breed|
-      # create the new plant_tag
       breed_name = Breed.find_by(
-      "name ILIKE ?", "%#{breed}%"
+      "name ILIKE ?", "%#{breed.strip}%"
     )
     end.compact
   end
