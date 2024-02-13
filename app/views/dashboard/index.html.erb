@@ -13,10 +13,11 @@
        <h4 class="name"><br><%= @current_user.profile.first_name %></h4>
         <p><%= @current_user.email %></p>
         <p><%= @current_user.profile.address %></p>
+        <div>
       <ul class="list-unstyled">
-        <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
         <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
-        <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user) %></li>
+        <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
+        <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user), class: "btn-prof" %></li>
       </ul>
     </div>
   </div>
