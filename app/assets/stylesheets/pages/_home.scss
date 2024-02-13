@@ -13,7 +13,7 @@ body {
 }
 
 .home-background {
-  background-image: url("home_background.png");
+  background-color: white;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -50,4 +50,37 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+}
+
+.banner-dog {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-explanation {
+  background-image: url('explanation.png');
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
 }

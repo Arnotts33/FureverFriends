@@ -5,7 +5,7 @@
 }
 
 .footer-container {
-  background-color: #035397;
+  background-color: #16697A;
   color: #fff;
   /*position: fixed;*/
   left: 0;
@@ -21,6 +21,9 @@
   margin: 0 10px;
 }
 
-.footer a:hover {
-  color: #ccc;
+.footer-links a {
+  color: white;
+}
+.footer-links a:hover {
+  color: #FFA62B;
 }

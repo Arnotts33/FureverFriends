@@ -19,23 +19,25 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #035397;
+  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon .navbar-brand {
   width: 40px;
 }
 
-.navbar-brand {
-  margin: 0;
+.container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.navbar-brand img {
-  border-radius: 50%;
+.navbar {
+  width: 100%;
+  height: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-
-
