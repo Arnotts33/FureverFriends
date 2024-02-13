@@ -78,17 +78,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_12_162034) do
     t.string "weight"
   end
 
-  create_table "emails", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "seller_id", null: false
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["seller_id"], name: "index_emails_on_seller_id"
-    t.index ["user_id"], name: "index_emails_on_user_id"
-  end
-
   create_table "profiles", force: :cascade do |t|
     t.string "profile_picture"
     t.bigint "user_id", null: false
@@ -173,8 +162,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_12_162034) do
   add_foreign_key "breed_sellers", "sellers"
   add_foreign_key "breed_suggestions", "breeds"
   add_foreign_key "breed_suggestions", "quiz_results"
-  add_foreign_key "emails", "sellers"
-  add_foreign_key "emails", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quiz_results", "quizzes"

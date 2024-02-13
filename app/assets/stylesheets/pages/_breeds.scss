@@ -4,17 +4,17 @@
   object-fit: cover;
   object-position: 50%;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid #16697A;
 }
 
 .dogs-card {
-  background-color: #FEFBF6;
+  background-color: #F8F1F1;
   color: black;
   width: 30%;
   margin-bottom: 30px;
   border-radius: 5px;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid #16697A;
   box-shadow: -1px -1px 4px 0px rgba(0,0,0,0.34);
 }
 .dogs-card-container {
@@ -26,33 +26,35 @@
 
 .card-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   padding: 20px;
 }
 
 .dogs-card-title {
   width: 100%;
+  height: 50%;
   border-radius: 50px;
 }
 
-.text-center {
-  color: #FEFBF6;
+.bolder {
+  background-color: #F8F1F1 ;
+  color: #16697A;
   padding: 10px;
+  font-weight: bolder;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bolder;
 }
 
 .breeds-container {
-  background-color: #035297b9;
-  margin-top: 20px;
+  background-color: #16697A;
+  margin-top: 10px;
   margin-bottom: 20px ;
-  border-radius: 10px;
 }
 
 .bold {
   font-weight: bold;
-}
-
-.bolder {
-  font-weight: 200;
 }
 
 .card-link {
@@ -61,7 +63,7 @@
 }
 
 .btn-dash {
-  background-color: #E8630A;
+  background-color: #DB6400;
   color: #ffffff;
   border-radius: 50px;
   padding: 5px 20px;
@@ -70,4 +72,16 @@
   text-decoration: none;
   height: 10%;
   align-self: flex-end;
+}
+
+.btn-more {
+  background-color: #DB6400;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  height: 10%;
+  margin-top: 20px;
 }
