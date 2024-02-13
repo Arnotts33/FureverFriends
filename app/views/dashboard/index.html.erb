@@ -1,30 +1,23 @@
 <div class="container-fluid">
-  <div class="row">
     <!-- Sidebar -->
     <div class="dash-nav sidebar">
-      <div class="text-center black-text">
+      </div>
+    <div class="text-center black-text">
         <% if @current_user.profile.profile_picture.attached? %>
             <%= cl_image_tag((@current_user.profile.profile_picture.key), :width=>125, :height=>125, :crop=>"fill", class: "profile-img") %>
             <% else %>
             <%= image_tag(("https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000&t=st=1707480406~exp=1707481006~hmac=c54fb5f77797663f114a9ef33de8d00d1b019b09a47970360ef95c580fe0e0ec"), :width=>125, :height=>125, :crop=>"fill", class: "profile-img") %>
           <% end %>
-        <h4><br><%= @current_user.profile.first_name %></h4>
+    <div class="row">
+    <div class="col-md-9 main-dash"> <!-- Adjusted column width -->
+       <h4 class="name"><br><%= @current_user.profile.first_name %></h4>
         <p><%= @current_user.email %></p>
         <p><%= @current_user.profile.address %></p>
-      </div>
-      <hr>
       <ul class="list-unstyled">
-        <li><%= link_to "Take quiz!", quizzes_path %></li>
-        <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile) %></li>
-        <li><%= link_to "Change password", edit_user_registration_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %></li>
+        <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
+        <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
         <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user) %></li>
       </ul>
-    </div>
-    <div class="col-md-9 main-dash"> <!-- Adjusted column width -->
-      <h2>Hello <%= @current_user.profile.first_name %>!</h2>
-      <p>This is the main content area where you can display different sections of your dashboard.</p>
-      <%= link_to "Take quiz!", quizzes_path %>
     </div>
   </div>
 </div>

@@ -78,6 +78,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_095902) do
     t.string "weight"
   end
 
+
   create_table "chatrooms", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -181,9 +182,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_095902) do
   add_foreign_key "breed_sellers", "sellers"
   add_foreign_key "breed_suggestions", "breeds"
   add_foreign_key "breed_suggestions", "quiz_results"
+
   add_foreign_key "chatrooms", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+
   add_foreign_key "profiles", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quiz_results", "quizzes"
