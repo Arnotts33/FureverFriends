@@ -16,13 +16,13 @@ class QuizzesController < ApplicationController
     answers = params[:answers]
 
     prompt = "List me 5 dog breeds are the best fit for me regarding these precisions:\n"
-    prompt += "- I have a #{answers['Q1']}\n"
-    prompt += "- I #{answers['Q2']}\n"
-    prompt += "- I have #{answers['Q3']}\n"
-    prompt += "- Do I have children ? #{answers['Q4']}\n"
-    prompt += "- Do I have money to spend on my dog ? #{answers['Q5']}\n"
-    prompt += "Please give me just the names, no text before, no numbers, jsut the names, remove the numbers I don't want it to be a list"
-
+    prompt += "- I have a #{answers["0"]}\n"
+    prompt += "- I #{answers["1"]}\n"
+    prompt += "- I have #{answers["2"]}\n"
+    prompt += "- Do I have children ? #{answers["3"]}\n"
+    prompt += "- Do I have money to spend on my dog ? #{answers["4"]}\n"
+    prompt += "Please give me just the names, no text before, no numbers, just the names, remove the numbers I don't want it to be a list and put the breeds always in a different order and for godsake no numbers !!!!!!!!"
+    puts prompt
     response = openai.chat(
       parameters: {
         model: "gpt-3.5-turbo",
@@ -36,7 +36,7 @@ class QuizzesController < ApplicationController
 
     @user = current_user
     # for each tag
-    
+
     redirect_to breeds_path(breeds_names: @breed_names)
   end
 end
