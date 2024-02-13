@@ -5,6 +5,12 @@ class ChatroomsController < ApplicationController
   end
 
   def index
-    @chatroom = Chatroom.all
+    @user_chats = user_chats(current_user)
+  end
+
+  private
+
+  def user_chats(current_user)
+    current_user.chatrooms.includes(:messages)
   end
 end
