@@ -1,0 +1,6 @@
+<h1><%= @seller.name %></h1>
+<p><strong>Email:</strong> <%= @seller.email %></p>
+<p><strong>Phone Number:</strong> <%= @seller.phone_number %></p>
+
+<h2>Start a chat !</h2>
+<p><%= link_to 'Create Chatroom', create_chatroom_seller_path(@seller), data: {turbo_method: :post} %></p>

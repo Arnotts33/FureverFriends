@@ -3,6 +3,8 @@ class Seller < ApplicationRecord
   has_many :breeds, through: :breed_sellers
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  has_many :chatrooms
+  has_many :messages
 
   scope :by_breed, ->(breed_name) {  joins(:breeds).where(breeds: { name: breed_name }) }
 
