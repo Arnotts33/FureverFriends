@@ -1,15 +1,15 @@
 <div class="breed-show-container">
   <div class="breed-card-container">
+    <div class="breed-detail-image">
+        <%= image_tag(@breed.picture) %>
+      </div>
     <div class="breed-image-title">
-       <div class="dog-image">
-          <%= image_tag(@breed.picture, :width=>320, :crop=>"scale", class: 'breed-picture') %>
-        </div>
-        <div class="breed-card">
-          <h1><%= @breed.name %></h1>
-          <h5>Lifespan: <%= @breed.lifespan %></h5>
-          <h5>Weight: <%= @breed.weight %> lbs</h5>
-          <p><%= @breed.description %></p>
-        </div>
+      <div class="breed-card">
+        <h1><%= @breed.name %></h1>
+        <h5>Lifespan: <%= @breed.lifespan %></h5>
+        <h5>Weight: <%= @breed.weight %> lbs</h5>
+        <p><%= @breed.description %></p>
+      </div>
     </div>
     <div class="location-button">
       <%= link_to "Find one near me!", sellers_path(:breed_id => @breed.id), class: 'btn' %>
