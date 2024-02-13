@@ -1,7 +1,6 @@
-<div class="container-fluid">
-    <!-- Sidebar -->
+<div class="dashboard-container">
     <div class="dash-nav sidebar">
-      </div>
+    </div>
     <div class="text-center black-text">
         <% if @current_user.profile.profile_picture.attached? %>
             <%= cl_image_tag((@current_user.profile.profile_picture.key), :width=>125, :height=>125, :crop=>"fill", class: "profile-img") %>

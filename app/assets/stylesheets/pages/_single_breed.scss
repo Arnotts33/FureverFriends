@@ -1,13 +1,16 @@
 .breed-card-container {
   width: 80%;
+  max-width: 800px;
   background-color: rgba(#035297b9, 0.8);
   padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0 40px 60px -6px black;
+  box-shadow: 10px 10px 6px -6px rgba(61, 61, 61, 0.8);
 }
 
 .breed-image-title {
@@ -38,13 +41,24 @@
 }
 
 .breed-show-container {
+  width: 100%;
+  background-image: url('paw-background.png');
+  background-size: cover;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 40px;
+  height: 100%;
 }
 
 .breed-description {
   color: white;
   margin-bottom: 24px;
+}
+
+.breed-detail-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50%;
+  border-radius: 5px;
+  border: 2px solid #16697A;
 }
