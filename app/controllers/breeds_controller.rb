@@ -2,7 +2,13 @@ class BreedsController < ApplicationController
   def index
     @user = current_user
     @breeds = Breed.all
-    @breeds_array = current_user.breeds
+    @breed_names = params[:breeds_names]
+    @breed_names = @breed_names.map do |breed|
+      # create the new plant_tag
+      breed_name = Breed.find_by(
+      "name ILIKE ?", "%#{breed}%"
+    )
+    end.compact
   end
 
   def show

@@ -2,24 +2,41 @@ class QuizzesController < ApplicationController
   def index
     @user = current_user
     @questions = [
-      { question: "Where do you live ?", answers: { "Big house with garden": 1, "Apartment outside the city": 2, "Apartment inside the city": 3 } },
-      { question: "Do you mind shedding ?", answers: { "Yes, I don't want a lot of shedding": 4, "It's not that big of a deal": 5, "No, it's fine by me !": 6 } },
-      { question: "How much time do you have for walks every day ?", answers: { "Less than 1 hour": 7, "Between 1 hour and 2 hours": 8, "Have all the time in the world !": 9 } },
+      { question: "Where do you live ?", answers: { "Big house with garden": "Big house with garden", "Apartment outside the city": "Apartment outside the city", "Apartment inside the city": "Apartment inside the city" } },
+      { question: "Do you mind shedding ?", answers: { "Yes, I don't want a lot of shedding": "Yes, I don't want a lot of shedding", "Shedding is not that big of a deal": "Shedding is not that big of a deal", "No, shedding is fine by me !": "No, shedding is fine by me !" } },
+      { question: "How much time do you have for walks every day ?", answers: { "Less than 1 hour": "Less than 1 hour", "Between 1 hour and 2 hours": "Between 1 hour and 2 hours", "Have all the time in the world !": "Have all the time in the world !" } },
+      { question: "Do you have children ?", answers: { "Yes": "Yes", "No": "No"} },
+      { question: "Do you money to spend on your friend ?", answers: { "Yes": "Yes", "Maybe": "Maybe", "No": "No" } },
       # Add more questions as needed
     ]
   end
 
   def submit
-    score = params[:answers].values.map(&:to_i).sum
+    openai = OpenAI::Client.new(api_key: ENV['OPENAI_API_KEY'])
+    answers = params[:answers]
 
-    # Find breeds with the exact same score as the user's quiz score
-    breeds = Breed.where(score: (score - 5)..(score + 5))
+    prompt = "List me 5 dog breeds are the best fit for me regarding these precisions:\n"
+    prompt += "- I have a #{answers['Q1']}\n"
+    prompt += "- I #{answers['Q2']}\n"
+    prompt += "- I have #{answers['Q3']}\n"
+    prompt += "- Do I have children ? #{answers['Q4']}\n"
+    prompt += "- Do I have money to spend on my dog ? #{answers['Q5']}\n"
+    prompt += "Please give me just the names, no text before, no numbers, jsut the names, remove the numbers I don't want it to be a list"
 
-    @breeds_array = breeds.to_a
+    response = openai.chat(
+      parameters: {
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: prompt}],
+        temperature: 0.7,
+      }
+    )
+    breed_names = response.dig("choices", 0, "message", "content")
+    @breed_names = breed_names.split(',')
+    puts @breed_names.inspect
 
-    current_user.breeds = @breeds_array
-    current_user.save
-
-    redirect_to breeds_path(breed_scores: @breeds_array.map(&:score))
+    @user = current_user
+    # for each tag
+    
+    redirect_to breeds_path(breeds_names: @breed_names)
   end
 end

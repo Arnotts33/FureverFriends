@@ -82,3 +82,5 @@ group :test do
 end
 
 gem "hotwire-rails", "~> 0.1.3"
+
+gem "ruby-openai"
