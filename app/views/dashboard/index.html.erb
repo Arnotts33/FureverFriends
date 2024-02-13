@@ -16,6 +16,7 @@
       <ul class="list-unstyled">
         <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
         <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
+        <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user) %></li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,14 @@
+<h1>Seller Messages</h1>
+
+<% if @user_chats.any? %>
+  <ul>
+    <% @user_chats.each do |chatroom| %>
+      <li>
+        <%= link_to chatroom.name, chatroom %>
+        <!-- You can also display additional information about the chatroom here -->
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No chatrooms available.</p>
+<% end %>

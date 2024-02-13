@@ -4,7 +4,7 @@
 </div>
 <div class="breeds-container">
 <div class="dogs-card-container p-3">
-    <% @breeds_array.each do |breed| %>
+    <% @breed_names.each do |breed| %>
       <div class="dogs-card p-1">
         <div class="dog-image">
           <%= link_to breed_path(breed), class: "card-link" do %>

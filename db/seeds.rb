@@ -43,24 +43,25 @@ dog_breeds_data.each do |breed_data|
   )
 end
 
-## def fetch_breeds
-##   url = "https://dogapi.dog/api/v2/breeds"
-##   response = URI.open(url).read
-##   JSON.parse(response)
-## end
-##
-## dog_breeds_data = fetch_breeds
-##
-## dog_breeds_data["data"].each do |breed_data|
-##   Breed.create!(
-##     name: breed_data["attributes"]["name"],
-##     description: breed_data["attributes"]["description"],
-##     lifespan: breed_data["attributes"]["life"],
-##     weight: breed_data["attributes"]["male_weight"],
-##     score: rand(1..20),
-##     picture: "https://images.unsplash.com/photo-1623052940978-051d2c0fb4be?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-##   )
-## end
+29.times do |i|
+  url = "https://dogapi.dog/api/v2/breeds?page[number]=#{i + 1}"
+  response = URI.open(url).read
+  dog_breeds_description = JSON.parse(response)
+
+  dog_breeds_description["data"].each do |breed_description|
+    dog_breed_name = breed_description["attributes"]["name"].split
+    dog_breed_join_name = dog_breed_name.first(2).join(" ")
+    breed_name = Breed.find_by(
+      "name ILIKE ?", "%#{dog_breed_join_name}%"
+    )
+    if breed_name
+      breed_name.description = breed_description["attributes"]["description"]
+      breed_name.save
+    end
+  end
+end
+
+
 ## dog_breeds = [
 ##   { name: 'Labrador Retriever', description: 'Friendly, outgoing, and high-spirited.', lifespan: '10-12 years', weight: '55-80 pounds', score: "12", picture: "https://images.unsplash.com/photo-1623052940978-051d2c0fb4be?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 ##
@@ -83,3 +84,7 @@ puts "Creating sellers..."
 Seller.create(name: "Des Gerveilles", address: "26 route du Pas de Meric, 33920 Saint Yzan de Soudiac", email: "seller1@gmail.com", phone_number: "0556454647")
 
 puts "Created sellers"
+
+puts "Destroying chatrooms..."
+
+Chatroom.destroy_all
