@@ -6,7 +6,7 @@ class QuizzesController < ApplicationController
       { question: "Do you mind shedding ?", answers: { "Yes, I don't want a lot of shedding": "Yes, I don't want a lot of shedding", "Shedding is not that big of a deal": "Shedding is not that big of a deal", "No, shedding is fine by me !": "No, shedding is fine by me !" } },
       { question: "How much time do you have for walks every day ?", answers: { "Less than 1 hour": "Less than 1 hour", "Between 1 hour and 2 hours": "Between 1 hour and 2 hours", "Have all the time in the world !": "Have all the time in the world !" } },
       { question: "Do you have children ?", answers: { "Yes": "Yes", "No": "No"} },
-      { question: "Do you money to spend on your friend ?", answers: { "Yes": "Yes", "Maybe": "Maybe", "No": "No" } },
+      { question: "Do you want to spend a lot of money on your friend ?", answers: { "Yes": "Yes", "Maybe": "Maybe", "No": "No" } },
       # Add more questions as needed
     ]
   end
