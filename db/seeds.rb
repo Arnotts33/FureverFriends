@@ -78,7 +78,7 @@ def random_address_in_range(range)
   street = Faker::Address.street_address
 end
 
-30.times do
+86.times do
   name = Faker::Name.name
   email = Faker::Internet.email(name: name)
   phone_number = Faker::PhoneNumber.phone_number
@@ -97,7 +97,7 @@ end
   )
 end
 
-30.times do
+86.times do
   name = Faker::Name.name
   email = Faker::Internet.email(name: name)
   phone_number = Faker::PhoneNumber.phone_number
