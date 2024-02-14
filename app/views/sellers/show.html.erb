@@ -1,14 +1,28 @@
-<div class="seller-container">
-  <div class="seller-card">
-    <div class="seller-profile">
-      <img src="https://source.unsplash.com/random/700×900/?happy,dog" alt="Seller profile pic">
+<section class="seller-container">
+  <div class="seller-card-container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col col-xl-10">
+        <div class="seller-card">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://images.unsplash.com/photo-1632498301446-5f78baad40d0?q=80&w=2312&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Seller profile pic" class="img-fluid" style="border-radius: 1rem 0 0 1rem;"/>
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <div class="seller-info">
+                  <h1><%= @seller.name %></h1>
+                  <p><strong>Email:</strong> <%= @seller.email %></p>
+                  <p><strong>Phone Number:</strong> <%= @seller.phone_number %></p>
+                </div>
+                <div class="chat-button-container">
+                  <h2>Let's chat about our dogs!</h2>
+                  <p><%= link_to 'Create Chatroom', create_chatroom_seller_path(@seller), data: {turbo_method: :post}, class: 'btn' %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="seller-contact">
-      <h1><%= @seller.name %></h1>
-      <p><strong>Email:</strong> <%= @seller.email %></p>
-      <p><strong>Phone Number:</strong> <%= @seller.phone_number %></p>
-    </div>
-    <h2>Let's chat about our dogs!</h2>
-    <p><%= link_to 'Create Chatroom', create_chatroom_seller_path(@seller), data: {turbo_method: :post}, class: 'btn' %></p>
   </div>
-</div>
+</section>
