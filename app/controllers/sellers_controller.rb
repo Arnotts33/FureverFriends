@@ -2,7 +2,7 @@ class SellersController < ApplicationController
   def index
     @user = current_user.profile
     @breed = Breed.find(params[:breed_id])
-    @sellers = Seller.by_breed(@breed.name).near(@user.address, 100).all
+    @sellers = Seller.by_breed(@breed.name).all
     @markers = @sellers.geocoded.map do |seller|
       {
         lat: seller.latitude,
@@ -20,6 +20,8 @@ class SellersController < ApplicationController
   def show
     @seller = Seller.find(params[:id])
     @chatrooms = @seller.chatrooms
+    @breed_seller = BreedSeller.where(seller_id: @seller.id).first
+    @breed = @breed_seller.breed.name
   end
 
   def create_chatroom

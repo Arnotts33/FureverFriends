@@ -1,6 +1,14 @@
-<h1><%= @seller.name %></h1>
-<p><strong>Email:</strong> <%= @seller.email %></p>
-<p><strong>Phone Number:</strong> <%= @seller.phone_number %></p>
-
-<h2>Start a chat !</h2>
-<p><%= link_to 'Create Chatroom', create_chatroom_seller_path(@seller), data: {turbo_method: :post} %></p>
+<div class="seller-container">
+  <div class="seller-card">
+    <div class="seller-profile">
+      <img src="https://source.unsplash.com/random/700×900/?happy,dog" alt="Seller profile pic">
+    </div>
+    <div class="seller-contact">
+      <h1><%= @seller.name %></h1>
+      <p><strong>Email:</strong> <%= @seller.email %></p>
+      <p><strong>Phone Number:</strong> <%= @seller.phone_number %></p>
+    </div>
+    <h2>Let's chat about our dogs!</h2>
+    <p><%= link_to 'Create Chatroom', create_chatroom_seller_path(@seller), data: {turbo_method: :post}, class: 'btn' %></p>
+  </div>
+</div>
