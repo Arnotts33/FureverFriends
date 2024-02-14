@@ -1,9 +1,10 @@
 .registration-page-container {
   width: 100%;
   height: 100%;
+  background-image: url('paw-background.png');
+  background-size: cover;
   display: flex;
   justify-content: center;
-  background-color: white;
 }
 
 .registration-container {
