@@ -61,20 +61,6 @@ end
   end
 end
 
-
-## dog_breeds = [
-##   { name: 'Labrador Retriever', description: 'Friendly, outgoing, and high-spirited.', lifespan: '10-12 years', weight: '55-80 pounds', score: "12", picture: "https://images.unsplash.com/photo-1623052940978-051d2c0fb4be?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-##
-## ]
-##
-## dog_breeds.each do |attributes|
-##   file = URI.open(attributes[:picture])
-##   breed = Breed.new(attributes)
-##   breed.photo.attach(io: file, filename: "#{attributes[:name]}.png", content_type: "image/png")
-##   breed.save!
-##   puts "Created #{breed.name}"
-## end
-
 puts "Destroying sellers..."
 
 Seller.destroy_all

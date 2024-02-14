@@ -1,7 +1,7 @@
 .breed-card-container {
   width: 80%;
   max-width: 800px;
-  background-color: rgba(#035297b9, 0.8);
+  background-color: rgba(#16697A, 0.8);
   padding: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -27,7 +27,7 @@
 
 
 .breed-card {
-  margin: 40px;
+  margin: 40px 40px 10px 40px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -35,9 +35,8 @@
   align-content: flex-start;
 }
 
-.breed-card {
-  margin-left: 20px;
-  margin-top: 0px;
+.breed-card p {
+  margin-top: 30px;
 }
 
 .breed-show-container {
