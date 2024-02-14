@@ -1,41 +1,23 @@
-<div class="quiz-container">
+<div class="quiz-container" data-controller="quiz" data-quiz-current-index-value="0">
   <%= form_tag submit_quizzes_path, class: "quiz-form", method: :post do %>
-    <% @questions.each_with_index do |q, index| %>
-    <div class = "ind-q">
-      <p><%= q[:question] %></p>
-    </div>
-      <div class = "answers">
-        <% q[:answers].each do |key, value| %>
-          <div class = "ind-a">
-            <label class="btn radio-btn-box-centered" >
-              <%= radio_button_tag "answers[#{index}]", value %>
-              <span><%= "#{key}" %></span>
-            </label>
+    <div class="quiz-questions">
+      <% @questions.each_with_index do |q, index| %>
+        <div class="question <%= index == 0 ? 'active' : '' %>" data-quiz-target="question">
+          <p><%= q[:question] %></p>
+          <div class="answers">
+            <% q[:answers].each do |key, value| %>
+              <div class="ind-a">
+                <label class="btn radio-btn-box-centered">
+                  <%= radio_button_tag "answers[#{index}]", value %>
+                  <span><%= "#{key}" %></span>
+                </label>
+              </div>
+            <% end %>
           </div>
-        <% end %>
-      </div>
-      <br>
-    <% end %>
-    <%= submit_tag "Submit", class: "btn-submit" %>
+        </div>
+      <% end %>
+    </div>
+    <%= submit_tag "Submit", class: "btn-submit", style: "display: none;", data: {quiz_target: "submitButton"} %>
+    <button type="button" id="next-btn" data-action="click->quiz#onNextButtonClick" data-quiz-target="nextButton" class="next-btn">Next</button>
   <% end %>
 </div>
-
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-    const labels = document.querySelectorAll('.ind-a label');
-
-    labels.forEach(label => {
-      label.addEventListener('click', function() {
-        // Remove 'active' class from all labels
-        labels.forEach(otherLabel => {
-          if (otherLabel !== label) {
-            otherLabel.classList.remove('active');
-          }
-        });
-
-        // Add 'active' class to the clicked label
-        label.classList.add('active');
-      });
-    });
-  });
-</script>

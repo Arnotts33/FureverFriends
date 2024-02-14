@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: normal;
   align-content: normal;
-  width: 80%;
-  height: fit-content;
+  width: 60%;
+  height: 40%;
   border-radius: 11px;
   background-color: #035297ce;
   box-shadow: 0px -1px 40px -1px rgba(0,0,0,0.75);
@@ -78,8 +78,7 @@
 
 .btn-submit {
   padding: 15px 40px;
-  background: #e8630a92;
-  border: 5px solid #E8630A;
+  background: #e8630a;
   border-radius: 50px;
   color: #fff;
   text-transform: uppercase;
@@ -105,3 +104,32 @@
   transition: none;
 }
 
+.quiz-questions {
+  overflow: hidden;
+}
+
+.question {
+  width: 100%;
+  transition: transform 1.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.question.active {
+  transform: translateX(0);
+}
+
+.next-btn {
+  padding: 15px 40px;
+  background: rgb(255, 102, 0);
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 18px;
+  letter-spacing: 3px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin: 50px auto;
+  transition: 1.5s;
+}
