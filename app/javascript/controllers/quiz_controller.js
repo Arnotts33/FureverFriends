@@ -20,7 +20,7 @@ export default class extends Controller {
         question.classList.remove('active');
         setTimeout(() => {
           question.style.display = "none";
-        }, 300);
+        }, 500);
       }
     });
 

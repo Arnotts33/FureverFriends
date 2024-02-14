@@ -2,14 +2,14 @@
   <%= form_tag submit_quizzes_path, class: "quiz-form", method: :post do %>
     <div class="quiz-questions">
       <% @questions.each_with_index do |q, index| %>
-        <div class="question <%= index == 0 ? 'active' : '' %>" data-quiz-target="question">
+        <div class="question <%= index == 0 ? 'active' : '' %> ind-q" data-quiz-target="question">
           <p><%= q[:question] %></p>
           <div class="answers">
             <% q[:answers].each do |key, value| %>
-              <div class="ind-a">
-                <label class="btn radio-btn-box-centered">
-                  <%= radio_button_tag "answers[#{index}]", value %>
-                  <span><%= "#{key}" %></span>
+              <div>
+                <label class="btn radio-btn-centered">
+                <span><%= "#{key}" %></span>
+                  <%= radio_button_tag "answers[#{index}]", value%>
                 </label>
               </div>
             <% end %>
@@ -17,7 +17,9 @@
         </div>
       <% end %>
     </div>
-    <%= submit_tag "Submit", class: "btn-submit", style: "display: none;", data: {quiz_target: "submitButton"} %>
-    <button type="button" id="next-btn" data-action="click->quiz#onNextButtonClick" data-quiz-target="nextButton" class="next-btn">Next</button>
+    <%= submit_tag "Submit", class: "btn btn-submit", style: "display: none;", data: {quiz_target: "submitButton"} %>
+    <div class="next-btn-container">
+    <button type="button" id="next-btn" data-action="click->quiz#onNextButtonClick" data-quiz-target="nextButton" class="btn next-btn">Next</button>
   <% end %>
+    </div>
 </div>
