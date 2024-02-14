@@ -9,9 +9,9 @@
           <% end %>
     <div class="row">
     <div class="col-md-9 main-dash"> <!-- Adjusted column width -->
-       <h4 class="name"><br><%= @current_user.profile.first_name %></h4>
-        <p><%= @current_user.email %></p>
-        <p><%= @current_user.profile.address %></p>
+       <h4 class="name"><br>Hi <%= @current_user.profile.first_name %>!</h4>
+        <p><strong>E-mail:</strong> <%= @current_user.email %></p>
+        <p> <strong>Location:</strong> <%= @current_user.profile.address %></p>
         <div>
       <ul class="list-unstyled">
         <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
@@ -20,4 +20,6 @@
       </ul>
     </div>
   </div>
+</div>
+</div>
 </div>
