@@ -13,14 +13,11 @@ export default class extends Controller {
     this.questionTargets.forEach((question, index) => {
       if (index === this.currentIndexValue) {
         question.style.display = "block";
-        setTimeout(() => {
-          question.classList.add('active');
-        }, 300);
+        question.classList.add('active');
+
       } else {
         question.classList.remove('active');
-        setTimeout(() => {
-          question.style.display = "none";
-        }, 500);
+        question.style.display = "none";
       }
     });
 
@@ -38,5 +35,14 @@ export default class extends Controller {
       this.currentIndexValue++;
       this.showCurrentQuestion();
     }
+  }
+
+  updateColor(event) {
+    console.log(event)
+    //if (this.choiceTarget.classList.contains("bg-red")) {
+      event.currentTarget.classList.add("bg-red");
+    //} else {
+      //this.choiceTarget.classList.remove("bg-red");
+    //}
   }
 }

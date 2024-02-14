@@ -1,25 +1,27 @@
-<div class="quiz-container" data-controller="quiz" data-quiz-current-index-value="0">
-  <%= form_tag submit_quizzes_path, class: "quiz-form", method: :post do %>
-    <div class="quiz-questions">
-      <% @questions.each_with_index do |q, index| %>
-        <div class="question <%= index == 0 ? 'active' : '' %> ind-q" data-quiz-target="question">
-          <p><%= q[:question] %></p>
-          <div class="answers">
-            <% q[:answers].each do |key, value| %>
-              <div>
-                <label class="btn radio-btn-centered">
-                <span><%= "#{key}" %></span>
-                  <%= radio_button_tag "answers[#{index}]", value%>
-                </label>
-              </div>
-            <% end %>
+<div class="quiz-bg">
+  <div class="quiz-container" data-controller="quiz" data-quiz-current-index-value="0">
+    <%= form_tag submit_quizzes_path, class: "quiz-form", method: :post do %>
+      <div class="quiz-questions">
+        <% @questions.each_with_index do |q, index| %>
+          <div class="question <%= index == 0 ? 'active' : '' %>" data-quiz-target="question">
+            <p><%= q[:question] %></p>
+            <div class="answers">
+              <% q[:answers].each do |key, value| %>
+                <div>
+                  <label class="btn radio-btn-centered" data-action="click->quiz#updateColor">
+                    <span><%= "#{key}" %></span>
+                    <%= radio_button_tag "answers[#{index}]", value%>
+                  </label>
+                </div>
+              <% end %>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-    <%= submit_tag "Submit", class: "btn btn-submit", style: "display: none;", data: {quiz_target: "submitButton"} %>
-    <div class="next-btn-container">
-    <button type="button" id="next-btn" data-action="click->quiz#onNextButtonClick" data-quiz-target="nextButton" class="btn next-btn">Next</button>
-  <% end %>
-    </div>
+        <% end %>
+      </div>
+      <%= submit_tag "Submit", class: "btn btn-submit", style: "display: none;", data: {quiz_target: "submitButton"} %>
+      <div class="next-btn-container">
+      <button type="button" id="next-btn" data-action="click->quiz#onNextButtonClick" data-quiz-target="nextButton" class="btn next-btn">Next</button>
+    <% end %>
+      </div>
+  </div>
 </div>
