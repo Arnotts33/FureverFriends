@@ -1,25 +1,27 @@
 <div class="dashboard-container">
-    <div class="dash-nav sidebar">
-    </div>
-    <div class="text-center black-text">
-        <% if @current_user.profile.profile_picture.attached? %>
-            <%= cl_image_tag((@current_user.profile.profile_picture.key), :width=>125, :height=>125, :crop=>"fill", class: "profile-img") %>
-            <% else %>
+  <div class="dash-nav sidebar">
+  </div>
+  <div class="black-text">
+    <div class="row">
+      <div class="col-md-9 main-dash">
+        <div class="d-flex justify-content-around">
+          <% if @current_user.profile.profile_picture.attached? %>
+            <%= cl_image_tag((@current_user.profile.profile_picture.key), :width=>200, :height=>200, :crop=>"fill", class: "profile-img") %>
+          <% else %>
             <%= image_tag(("https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000&t=st=1707480406~exp=1707481006~hmac=c54fb5f77797663f114a9ef33de8d00d1b019b09a47970360ef95c580fe0e0ec"), :width=>125, :height=>125, :crop=>"fill", class: "profile-img") %>
           <% end %>
-    <div class="row">
-    <div class="col-md-9 main-dash"> <!-- Adjusted column width -->
-       <h4 class="name"><br>Hi <%= @current_user.profile.first_name %>!</h4>
-        <p><strong>E-mail:</strong> <%= @current_user.email %></p>
-        <p> <strong>Location:</strong> <%= @current_user.profile.address %></p>
-        <div>
-      <ul class="list-unstyled">
-        <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
-        <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
-        <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user), class: "btn-prof" %></li>
-      </ul>
+          <div class="text-center">
+            <h4 class="name"><br>Hi <%= @current_user.profile.first_name %>!</h4>
+            <p><strong>E-mail:</strong> <%= @current_user.email %></p>
+            <p> <strong>Location:</strong> <%= @current_user.profile.address %></p>
+            <ul class="list-unstyled">
+              <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
+              <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
+              <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user), class: "btn-prof" %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </div>
