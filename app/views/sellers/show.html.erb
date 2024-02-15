@@ -11,12 +11,11 @@
               <div class="card-body p-4 p-lg-5 text-black">
                 <div class="seller-info">
                   <h1><%= @seller.name %></h1>
-                  <p><strong>Email:</strong> <%= @seller.email %></p>
-                  <p><strong>Phone Number:</strong> <%= @seller.phone_number %></p>
+                  <p><strong>@ </strong> <%= @seller.email %></p>
+                  <p><strong>☏ </strong> <%= @seller.phone_number %></p>
                 </div>
                 <div class="chat-button-container">
-                  <h2>Let's chat about our dogs!</h2>
-                  <p><%= link_to 'Create Chatroom', create_chatroom_seller_path(@seller), data: {turbo_method: :post}, class: 'btn' %></p>
+                  <p><%= link_to "Let's chat about our dogs!", create_chatroom_seller_path(@seller), data: {turbo_method: :post}, class: 'btn' %></p>
                 </div>
               </div>
             </div>
