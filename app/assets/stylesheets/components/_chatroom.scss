@@ -1,21 +1,25 @@
 .chatroom {
-  background: white;
+  background-image: url('paw-background.png');
   margin-top: 9px;
-  height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1;
+  border-radius: 12px;
+  width: 60%;
+  height: 95%;
+  box-shadow: 10px 10px 6px -6px rgba(61, 61, 61, 0.8);
 
   h1 {
     border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    border-radius: 2px;
   }
 
   .messages {
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     padding: 1rem;
   }
 
@@ -27,4 +31,23 @@
       margin-bottom: 0;
     }
   }
+}
+
+.m-box-display {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.smaller-message {
+  width: 30%;
+}
+
+.bg-message-color {
+  background-color: #f8f1f197;
+  border-radius: 12px;
+  margin: 3px;
+}
+
+.form-control {
+  width: 230px;
 }

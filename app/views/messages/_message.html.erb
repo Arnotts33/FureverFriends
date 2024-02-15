@@ -1,7 +1,9 @@
-<div id="message-<%= message.id %>">
+<div class="bg-message-color" id="message-<%= message.id %>">
   <small>
-    <strong><%= message.user.email %></strong>
-    <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+    <div class="d-flex justify-content-between">
+      <strong><%= "#{message.user.profile.first_name} #{message.user.profile.last_name}" %></strong>
+      <i><%= message.created_at.strftime("%e %b at %H:%M") %></i>
+    </div>
   </small>
   <p><%= message.content %></p>
 </div>
