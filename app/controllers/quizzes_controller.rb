@@ -15,7 +15,7 @@ class QuizzesController < ApplicationController
     openai = OpenAI::Client.new(api_key: ENV['OPENAI_API_KEY'])
     answers = params[:answers]
 
-    prompt = "List me 5 dog breeds are the best fit for me regarding these precisions:\n"
+    prompt = "List me 6 dog breeds are the best fit for me regarding these precisions:\n"
     prompt += "- I have a #{answers["0"]}\n"
     prompt += "- I #{answers["1"]}\n"
     prompt += "- I have #{answers["2"]}\n"

@@ -18,23 +18,15 @@
   margin-bottom: 50px;
 }
 
-//.seller-profile img {
-//  width: 400px;
-//  margin-top: 20px;
-//  border-radius: 10px;
-//}
-//
-//.seller-profile {
-//  margin-bottom: 20px;
-//}
-//
-//.seller-contact {
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//  margin-bottom: 20px;
-//}
+.seller-info h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
 
+.seller-info p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 .seller-card {
   background-color: #F8F1F1;
@@ -51,7 +43,9 @@
   a.btn {
     margin-left: 0px !important;
     margin-top: 10px;
-    font-size: 24;
+    font-size: 20px;
+    padding: 25px 45px;
+    font-weight: bold;
   }
 }
 
