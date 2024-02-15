@@ -38,10 +38,6 @@
   justify-content: space-evenly;
 }
 
-.smaller-message {
-  width: 30%;
-}
-
 .bg-message-color {
   background-color: #f8f1f197;
   border-radius: 12px;
@@ -49,5 +45,9 @@
 }
 
 .form-control {
-  width: 230px;
+  width: 400px;
+}
+
+.btn-bigger {
+  width: 150px;
 }
