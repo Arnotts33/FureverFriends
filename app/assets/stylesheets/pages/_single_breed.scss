@@ -17,7 +17,7 @@
   display: flex;
   //justify-content: space-around;
   align-items: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 
@@ -34,9 +34,19 @@
   align-items: flex-start;
   align-content: flex-start;
 }
+.breed-card h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.breed-card h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
 .breed-card p {
-  margin-top: 30px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .breed-show-container {
@@ -60,4 +70,18 @@
   object-position: 50%;
   border-radius: 5px;
   border: 2px solid #16697A;
+}
+
+.location-button .btn {
+  border-radius: 50px;
+  padding: 30px 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.location-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }

@@ -1,5 +1,6 @@
 .dog-image img {
   width: 100%;
+  height: 400px;
   object-fit: cover;
   object-position: 50%;
   border-radius: 5px;
@@ -7,10 +8,12 @@
 }
 
 .dogs-card {
+  width: 30%;
   background-color: #F8F1F1;
   color: black;
   width: 30%;
   margin-bottom: 30px;
+  margin-left: 20px;
   border-radius: 5px;
   align-items: center;
   border: 2px solid #16697A;
@@ -20,9 +23,12 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   box-shadow: 10px 10px 6px -6px rgba(61, 61, 61, 0.8);
   border-radius: 10px;
+  background-color: rgba(#16697A,0.8);
+  margin-top: 10px;
+  margin-bottom: 20px ;
 }
 
 .card-content {
@@ -56,11 +62,7 @@
   font-weight: bolder;
 }
 
-.breeds-container {
-  background-color: rgba(#16697A,0.8);
-  margin-top: 10px;
-  margin-bottom: 20px ;
-}
+
 
 .bold {
   font-weight: bold;
@@ -75,12 +77,13 @@
   background-color: #DB6400;
   color: #ffffff;
   border-radius: 50px;
-  padding: 5px 20px;
+  padding: 20px 20px;
   margin-left: 10px;
   margin-right: 20px;
   text-decoration: none;
   height: 10%;
   align-self: flex-end;
+  font-weight: bold;
 }
 
 .btn-more {
