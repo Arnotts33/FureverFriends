@@ -18,7 +18,10 @@
     <div class="page-container">
       <div class="navbar-container"><%= render "shared/navbar" %></div>
       <div class="content-container"><%= yield %></div>
-      <div class="footer-container"><%= render "shared/footer" %></div>
+      
+      <% if request.path == root_path %>
+        <div class="footer-container"><%= render "shared/footer" %></div>
+      <% end %>
     </div>
 
   </body>
