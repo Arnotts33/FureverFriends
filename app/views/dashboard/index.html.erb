@@ -15,9 +15,29 @@
             <p><strong>E-mail:</strong> <%= @current_user.email %></p>
             <p> <strong>Location:</strong> <%= @current_user.profile.address %></p>
             <ul class="list-unstyled">
-              <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn-prof" %></li>
-              <li><%= link_to "Take quiz!", quizzes_path,  class: "btn-prof" %></li>
-              <li><%= link_to "My Chatrooms", user_chatrooms_path(current_user), class: "btn-prof" %></li>
+              <li><%= link_to "Edit profile", edit_profile_path(@current_user.profile), class: "btn" %></li>
+              <li><%= link_to "Take quiz!", quizzes_path,  class: "btn" %></li>
+              <li class="nav-item dropdown">
+  <button class="btn" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    My Chatrooms
+  </button>
+  <div class="drop-pretty dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+    <h1>Seller Messages</h1>
+    <% if @user_chats.any? %>
+      <ul>
+        <% @user_chats.each do |chatroom| %>
+          <li>
+            <%= link_to chatroom.name, chatroom, class: "dropdown-item" %>
+            <!-- You can also display additional information about the chatroom here -->
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="dropdown-item">No chatrooms available.</p>
+    <% end %>
+  </div>
+</li>
+
             </ul>
           </div>
         </div>
