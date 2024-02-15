@@ -79,8 +79,8 @@ def random_address_in_range(range)
 end
 
 86.times do
-  name = Faker::Name.name
-  email = Faker::Internet.email(name: name)
+  name = Faker::Company.name
+  email = Faker::Internet.email(name: "#{name}.dogshelter", domain: "gmail.com")
   phone_number = Faker::PhoneNumber.phone_number
 
   address = random_address_in_range(bordeaux_range)
@@ -88,7 +88,7 @@ end
   longitude = bordeaux_range[:lng] + rand(-bordeaux_range[:radius]..bordeaux_range[:radius])
 
   Seller.create(
-    name: name,
+    name: "#{name} Dog Shelter",
     address: address,
     email: email,
     phone_number: phone_number,
@@ -98,8 +98,8 @@ end
 end
 
 86.times do
-  name = Faker::Name.name
-  email = Faker::Internet.email(name: name)
+  name = Faker::Company.name
+  email = Faker::Internet.email(name: "#{name}.dogshelter", domain: "gmail.com")
   phone_number = Faker::PhoneNumber.phone_number
 
   address = random_address_in_range(cologne_range)
@@ -107,7 +107,7 @@ end
   longitude = cologne_range[:lng] + rand(-bordeaux_range[:radius]..cologne_range[:radius])
 
   Seller.create(
-    name: name,
+    name: "#{name} Dog Shelter",
     address: address,
     email: email,
     phone_number: phone_number,
