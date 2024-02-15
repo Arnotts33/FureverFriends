@@ -138,6 +138,10 @@ end
 
 puts "Created BreedSellers"
 
+puts "Destroying messages..."
+
+Message.destroy_all
+
 puts "Destroying chatrooms..."
 
 Chatroom.destroy_all
