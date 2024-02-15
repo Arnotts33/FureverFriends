@@ -25,6 +25,7 @@
 
 .profile-img {
   border: 1px solid #16697A;
+  margin-top: 15px;
 }
 
 .main-dash {
@@ -42,6 +43,9 @@
   color: black;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 .btn-prof {
   background-color: #DB6400;
