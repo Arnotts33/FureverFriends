@@ -27,7 +27,7 @@ class SellersController < ApplicationController
   def create_chatroom
     @seller = Seller.find(params[:id])
     @chatroom = @seller.chatrooms.create(user_id: current_user.id, name: "Chatroom for #{@seller.name}")
-    redirect_to @chatroom
+    redirect_to chatroom_path(@chatroom)
   end
 
   private
