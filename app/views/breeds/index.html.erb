@@ -2,6 +2,7 @@
   <h1>It's a match!</h1>
   <h3>Browse through the list of your perfect Pawtners:</h3>
 </div>
+<%= link_to "Return to dashboard", dashboard_path, class: "btn-dash" %>
 <div class="breeds-container">
 <div class="dogs-card-container p-3">
     <% @breed_names.each do |breed| %>
@@ -16,6 +17,5 @@
       </div>
         <% end %>
     <% end %>
-    <%= link_to "Return to dashboard", dashboard_path, class: "btn-dash" %>
   </div>
 </div>
