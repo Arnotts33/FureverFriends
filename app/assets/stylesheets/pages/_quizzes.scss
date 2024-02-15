@@ -73,11 +73,12 @@
 /* ------------------BUTTONS------------------ */
 
 .btn-submit {
-  padding: 10px 50px;
+  padding: 10px 125px;
   background-color: #DB6400;
   border-radius: 50px;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: bolder;
   letter-spacing: 1px;
   position: relative;
   cursor: pointer;
@@ -85,11 +86,12 @@
 }
 
 .next-btn {
-  padding: 10px 50px;
+  padding: 10px 125px;
   background-color: #DB6400;
   border-radius: 50px;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: bolder;
   letter-spacing: 1px;
   position: relative;
   cursor: pointer;
@@ -110,6 +112,7 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-weight: bold;
   transition: 1s;
   padding-bottom: 40px;
   padding-top: 40px;
