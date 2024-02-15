@@ -26,6 +26,7 @@
 .profile-img {
   border: 1px solid #16697A;
   margin-top: 15px;
+  border-radius: 10px;
 }
 
 .main-dash {
@@ -36,11 +37,15 @@
   height: 400px;
   overflow: auto;
   position: relative;
-  padding-top: 80px;
+  padding-top: 40px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 6px -6px rgba(146, 146, 146, 0.8);
 }
 
 .black-text {
   color: black;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 
 ::-webkit-scrollbar {
